@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>C# Technical Documentation</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    </head>
+
+    <body>
+        <nav id="navbar">
+            <header id="nav-head">
+                <img id="cs-logo" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg" alt="C# Logo" \>
+                <div class="dropdown">
+                    <button class="dropbtn"><img id="navbutton" src="https://img.icons8.com/?size=100&id=OWi1FRGoDmTl&format=png&color=FFFFFF"></button>
+                    <div class="dropdown-content">
+                        <a class="nav-link" href="#Introduction">Introduction</a>
+                        <a class="nav-link" href="#Prequisites">Prequisites</a>
+                        <a class="nav-link" href="#Hello_World">Hello World</a>
+                        <a class="nav-link" href="#Variables_and_Data_Types">Variables and Data Types</a>
+                        <a class="nav-link" href="#Declaring_Variables">Declaring Variables</a>
+                        <a class="nav-link" href="#Variable_Scope">Variable Scope</a>
+                        <a class="nav-link" href="#Global_Variables">Global Variables</a>
+                        <a class="nav-link" href="#Constants">Constants</a>
+                        <a class="nav-link" href="#If...else_Statements">If...Else Statements</a>
+                        <a class="nav-link" href="#While_Statements">While Statements</a>
+                        <a class="nav-link" href="#Function_Declarations">Function Declarations</a>
+                        <a class="nav-link" href="#Reference">Reference</a>
+                    </div>
+                </div>
+                <h4>C# Technical Documentation</h4>
+                <img id="device-type" src="https://img.icons8.com/?size=100&id=20389&format=png&color=FFFFFF" />
+            </header>
+        </nav>
+
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header><h3>Introduction</h3></header>
+                <p>The C# language is the most popular language for the .NET platform, a free, cross-platform, open source development environment. C# programs can run on many different devices, from Internet of Things (IoT) devices to the cloud and everywhere in between. You can write apps for phone, desktop, and laptop computers and servers. </p>
+
+
+                <p>C# is a cross-platform general purpose language that makes developers productive while writing highly performant code. With millions of developers, C# is the most popular .NET language. C# has broad support in the ecosystem and all .NET workloads. Based on object-oriented principles, it incorporates many features from other paradigms, not least functional programming. Low-level features support high-efficiency scenarios without writing unsafe code. Most of the .NET runtime and libraries are written in C#, and advances in C# often benefit all .NET developers.</p>
+            </section>
+
+            <section class="main-section" id="Prequisites">
+                <header><h3>Prequisites</h3></header>
+                <p>While there are no strict prerequisites for learning C#, a basic understanding of the following concepts can be helpful:</p>
+                <ul>
+                    <li><strong>Basic programming logic:</strong> Understanding how to break down problems into smaller, solvable steps.</li>
+                    <li><strong>Variables and data types:</strong> Knowing how to store and manipulate different types of data.</li>
+                    <li><strong>Control flow statements:</strong> Understanding how to control the flow of execution in a program using if-else statements, loops, and other constructs.</li>
+                    <li><strong>Functions and procedures:</strong> Knowing how to define and call reusable blocks of code.</li>
+                </ul>
+                <li>Prior programming experience is helpful in making the learning process smoother as you'll already be familiar with the above general concepts, allowing you to be up and running with a potentially shorter learning curve.</li>
+                <h4>Software prequisites for C# Development</h4>
+                <li>To start developing C# applications, you'll primarily need the following software: </li>
+                <ol>
+                    <li><strong>A C# Development Environment:</strong></li>
+                    <ul>
+                        <li><em>Microsoft Visual Studio:</em> This is the most popular IDE for C# development. It offers a comprehensive suite of tools for software development. This has everything needed built-in, from code editors and debuggers, to compilers and visual designers. It offers extensive features for complex projects, including advanced debugging, profiling, testing tools, and project mangement capabilities. Due its comprehensive nature, it requires more system resources and has a larger installation size.</li>
+
+                        <li><em>Visual Studio Code (VS Code):</em> A lightweight and versitile code editor that's fast and highly customizible. Runs on multiple Operating Systems, including Windows, MacOS, and Linux. VS Code's functionality can be significantly expanded by installing extensions for various programming languages, tools and services, allowing you to tailor to your specific needs--its code is also open-source.</li>
+                    </ul>
+                    <li><strong>.NET SDK:</strong></li>
+                    <ul>
+                        <li>The .NET SDK provides the necessary tools and libraries to compile, run, and package C# applications. You can download it from the official Microsoft website.</li>
+                    </ul>
+                </ol>
+            </section>
+
+            <section class="main-section" id="Hello_World">
+                <header><h3>Hello World</h3></header>
+                <p>Here is a basic introduction to C# per the customary "Hello, World!" program:</p>
+                <pre>
+                    <code>using System;
+                    namespace HelloWorld;
+                    {
+                    class Program
+                    {
+                        static void Main(string[] args)
+                        {
+                        Console.WriteLine("Hello, World!");
+                        }
+                    }
+                    }</code>
+                </pre>
+                <h4>Explanation:</h4>
+                <ol>
+                    <li><code>using System;</code>: This line imports the <code>System</code> namespace, which contains fundamental classes like <code>Console</code></li>
+                    <li><code>namespace HellowWorld</code>: This declares a namespace to organize your code. </li>
+                    <li><code>class Program</code>: This defines a class named <code>Program</code>, which is the entry point of the application.</li>
+                    <li><code>static void Main(string[] args)</code>: This is the <code>Main</code> method, the starting point of the program execution. </li>
+                    <ul>
+                        <li><code>static</code>: This keyword indicates that the method belongs to the class itself, rather than to an instance of the class.</li>
+                        <li><code>void</code>: This means the method doesn't return any value.</li>
+                        <li><code>string[] args</code>: This parameter is an array of strings that can be used to pass arguments to the program from the command line.</li>
+                    </ul>
+                    <li><code>Console.WriteLine("Hello, World!");</code>: This line prints the message <samp>"Hello, World!"</samp> to the console.</li>
+                    <ul>
+                        <li><code>Console.WriteLine</code>: This method writes a line of text to the console.</li>
+                    </ul>
+                </ol>
+
+                <h4>To run this code:</h4>
+                <ol>
+                    <li><strong>Create a new C# project:</strong> Use your chosen IDE (like Visual Studio or Visual Studio Code) to create a new C# console application project.</li>
+                    <li><strong>Paste the code:</strong> Copy and paste the code into the <code>Program.cs</code> file of your project.</li>
+                    <li><strong>Run the program:</strong> Build and run the project. You should see the output "Hello, World!" in the console.</li>
+                </ol>
+                <li>This is a basic example of a C# program. As you learn more, you'll be able to create more complex and powerful applications.</li>
+            </section>
+
+            <section class="main-section" id="Variables_and_Data_Types">
+                <header><h3>Variables and Data Types</h3></header>
+                <p>In C#, variables are used to store data. Before using a variable, you must declare its data type, which specifies the kind of data it can hold. C# is a <strong>strongly-typed language</strong>, meaning that you <strong>must</strong> declare the type of a variable before using it.</p>
+
+                <h4>Data Types</h4>
+                <li>C# categorizes data types into two main groups:</li>
+                <ol>
+                    <li>Value Types</li>
+                    <p><em>Store data directly within the variable itself.</em></p>
+                    <ul>
+                        <h4>Integral:</h4>
+                        <li><code>sbyte</code>: Stores a signed integer between -128 and 127</li>
+                        <li><code>byte</code>: Stores an unsigned integer between 0 and 255</li>
+                        <li><code>short</code>: Stores a signed integer between -32,768 and 32,767</li>
+                        <li><code>ushort</code>: Stores an unsigned integer between 0 and 65,535 </li>
+                        <li><code>int</code>: Stores integer numbers(e.g., 42, -10)</li>
+                        <li><code>uint</code>: Unsigned 32-bit integer (0 to 4,294,967,295)</li>   
+                        <li><code>long</code>: Stores a signed integer between -9,223,372,036,854,775,808 and 9,223,372,036,854,775,807</li>
+                        <li><code>ulong</code>: Stores an unsigned integer between 0 and 18,446,744,073,709,551,615</li>
+
+                        <h4>Floating-Point:</h4>
+            
+                        <li><code>float</code>: Stores single-precision floating-point numbers (e.g. 3.14f)</li>
+                        <li><code>double</code>: Stores double-precision floating-point numbers (e.g., 3.14159265359)</li>
+                        <li><code>decimal</code>: Stores decimal numbers with high precision (e.g., 123.45m)</li>
+
+                        <h4>Character:</h4>
+                        <li><code>char</code>: Stores a single Unicode character (e.g., 'A', '!', '€')</li>
+                        <h4>Boolean:</h4>
+                        <li><code>bool</code>: Stores a logical value (true or false)</li>
+                        <h4>DateTime:</h4>
+                        <li><code>DateTime</code>: Represents a data and time value;
+
+                        <h4>Enum:</h4>
+                        <li>Defines a set of named constants.</li>
+                        <li>Example:</li>
+                        <pre>
+                            <code>enum Days { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };</code>
+                        </pre>
+                        
+                        <h4>Struct Types:</h4>
+                        <p>User-defined value types.</p>
+                        <p>Example:</p>
+                        <pre>
+                            <code>struct Point
+                            {
+                              public int X { get; set; }
+                              public int Y { get; set; }
+                            }</code>
+                        </pre>
+                    </ul>
+                    <li>Reference Types</li>
+                    <p><em>Store a reference (memory address) to the data</em></p>
+                    <ul>
+                        <h4>Classes:</h4>
+                        <li>Defines a blueprint for creating objects.</li>
+                        <p>Example:</p>
+                        <pre>
+                            <code>class Person
+                            {
+                              public string Name { get; set; }
+                              public int Age { get; set; }
+                            }</code>
+                        </pre>
+                        <h4>Interfaces</h4>
+                        <li>Defines a contract that classes must implement</li>
+                        <p>Example: </p>
+                      <pre>
+                          <code>interface IShape 
+                          { 
+                            double Area { get; } 
+                          }</code>
+                      </pre>
+                      <h4>Arrays:</h4>
+                      <li>Stores a collection of the same data type</li>
+                      <p>Example: <code>int[] numbers = {1, 2, 3};</code></p>
+                      <h4>Strings:</h4>
+                      <li>Stores a sequence of characters.</li>
+                      <p>Example: <code>string name = "Alice";</code></p>
+                      <h4>Delegates:</h4>
+                      <li>Reference to a method</li>
+                      <h4>Nullable Types:</h4>
+                      <li>Value types that can hold null values. </li>
+                      <p>Example: <code>int? nullableInt = null;</code></p>
+                </ol>
+                      <h4>Key Differences Between Value Types and Reference Types:</h4>
+                      <h5>Value Types</h5>
+                      <ul>
+                          <li>Stored directly on the stack</li>
+                          <li>Copied by value</li>
+                      </ul>
+                      <h5>Reference Types</h5>
+                      <ul>
+                        <li>Stored on the heap</li>
+                        <li>Referenced by pointers</li>
+                        <li>Copied by reference</li>
+                      </ul>
+                    
+                      <h4>Key Considerations</h4>
+                      <ul>
+                          <li><strong>Choosing the Right Data Type:</strong> Select the data type that best suits the type and range of values you need to represent. This helps to optimize memory usage and prevent potential errors.</li>
+                          <li><strong>Type Safety:</strong> C# is a type-safe language. This means that you cannot assign a value of one data type to a variable of another incompatible data type without explicit conversion (casting).</li>
+                          <li>By understanding these fundamental concepts of variable types, you can effectively write C# code to create various data structures and algorithms.</li>
+                      </ul>
+
+            </section>
+
+            <section class="main-section" id="Declaring_Variables">
+                <header><h3>Declaring Variables</h3></header>
+                <p>To declare a variable, you specify its data type and name:</p>
+                <pre>
+                    <code>int age;
+                    string name;</code>
+                </pre>
+                <p>To initialize a variable, you assign a value to it:</p>
+                <pre>
+                    <code>age = 25;
+                    name = "Bob";</code>
+                </pre>
+                <h4>Type Inference (var Keyword):</h4>
+                <p>C# Allows you to use the <code>var</code> keyword to let the compiler infer the type of a variable at compile time:</p>
+                <pre>
+                    <code>var age = 25; // Inferred as int
+                    var name = "Alice"; // Inferred as string</code>
+                </pre>
+            </section>
+
+            <section class="main-section" id="Variable_Scope">
+                <header><h3>Variable Scope</h3></header>
+                <li><strong>Variable Scope</strong> refers to the region of a program where a variable is accessuble. In C#, the scope of a variable is determined by where it is declared.</li>
+                <h4>Types of Scope in C#</h4>
+                <ol>
+                    <li>Local Scope:</li>
+                    <ul>
+                        <li>Variables declared within a method, loop, or code block have local scope.</li>
+                        <li>They are only accessible wihin that specific block.</li>
+                        <li>Once the block ends, the variable is destroyed</li>
+                    </ul>
+                    <pre>
+                        <code>void MyMethod()
+                        {
+                        int x = 10; // Local to MyMethod
+                        //...
+                        }</code>
+                    </pre>
+                    
+                    <li>Class-Level Scope:</li>
+                    <ul>
+                        <li>Variables declared within a class but outside any method have class-level scope.</li>
+                        <li>They are accessible to all methods within that class.</li>
+                    </ul>
+                        <pre>
+                            <code>Class MyClass
+                            {
+                              int classVariable = 20; // Accessible to all methods in MyClass
+                              
+                              void Method1()
+                              {
+                                Console.WriteLine(classVariable);
+                              }
+                              
+                              void Method2() {
+                                Console.WriteLine(classVariable);
+                              }
+                            }</code>
+                        </pre>
+                    <li>Namespace Scope:</li>
+                    <ul>
+                        <li>Variables declared within a namespace are accessible to all classes within that namespace.</li>
+                        <li>This is less common in practice</li>
+                    </ul>
+                    <li>Static Scope:</li>
+                    <ul>
+                        <li>Variables declared with the <code>static</code> keyword belong to the class itself, not to specific instances.</li>
+                        <li>They can be accessed without creating an instance of the class</li>
+                        <pre>
+                            <code>class MyClass
+                            {
+                              public static int staticVariable = 30;
+
+                              public static voide MyMethod()
+                              {
+                                Console.WriteLine(staticVariable);
+                              }
+                            }</code>
+                        </pre>
+                        <h4>Important Considerations:</h4>
+                        <li><strong>Variable Shadowing:</strong> If you declare a variable with the same name within a nested scope, the inner variable will "shadow" the outer one.</li>
+                        <li><strong>Variable Lifetime:</strong> A variable's lifetime is the duration for which it exists in memory. Local variables are typically allocated on the stack and destroyed when the method or block ends. Class-level and static variables have a longer lifetime, often the entire duration of the program.</li>
+                    </ul>
+                </ol>
+                <li>Understanding variable scope is crucial for writing well-structured and maintainable C# code. By properly managing the scope of your variables, you can avoid naming conflicts, improve code readability, and prevent unintended side effects.</li>
+            </section>
+            
+            <section class="main-section" id="Global_Variables">
+                <header><h3>Global Variables</h3></header>
+                <h4>What are Global Variables in C#?</h4>
+                <ul>
+                    <li><strong>Definition:</strong> Global Variables are variables declared outside of any class or method.</li>
+                    <li><strong>Accessibility:</strong> They are accessible from anywhere within the same file or assembly (a collection of compiled code files).
+                    <li>Usage:</li>
+                    <ul>
+                        <li><strong>Rarely used:</strong> Due to their potential for introducing side effects and making code harder to maintain, global variables are generally discouraged in modern C# programming.</li>
+                        <li><strong>Limited-use cases:</strong></li>
+                            <ul>
+                                <li><strong>Application-wide constants:</strong> For values that never change and need to be accessed throughout the application.</li>
+                                <li><strong>Singleton pattern:</strong> In some cases, global variables can be used to implement the Singleton design pattern, where only one instance of a class exists.</li>
+                            </ul>
+                    </ul>
+                </ul>
+
+                <h4>How to Declare a Global Variable in C#:</h4>
+                <ol>
+                    <li><strong>Create a separate file (e.g., <code>GlobalVariables.cs</code>):</strong> This helps to isolate global variables and improve code organization.</li>
+                    <li><strong>Declare the variable outside of any class:</strong></li>
+                    <pre>
+                        <code>public static class GlobalVariables
+                        {
+                        public static string AppName = "My Application";
+                        public const int MaxItems = 100;
+                        }</code>
+                    </pre>
+                    <ul>
+                        <li><code>public static</code>: Makes the variable accessible from other parts of the application.</li>
+                        <li><code>const</code>: Defines a constant value that cannot be changed after it's declared.</li>
+                    </ul>
+                </ol>
+
+                <h4>Accessing a Global Variable</h4>
+                <pre>
+                    <code>// In another class or method
+                    string appName = GlobalVariables.AppName;</code>
+                </pre>
+                <h4>Advantages</h4>
+                <ul>
+                    <li><strong>Side effects:</strong> Changes to a global variable can have unintended consequences in other parts of the code. </li>
+                    <li><strong>Maintainability:</strong> Makes code harder to understand and maintain, especially in large projects.</li>
+                    <li><strong>Testing: </strong> Can make unit testing more difficult.</li>
+                </ul>
+                <h4>Alternatives to Global Variables</h4>
+                <ul>
+                    <li><strong>Static class properties:</strong> A more structured and maintainable way to share data within an application.</li>
+                    <li><strong>Dependency injection:</strong> A powerful technique for managing dependencies between classes, reducing the need for global variables.</li>
+                    <li><strong>Configuration files:</strong> For storing application settings in a central location</li>
+                </ul>
+                <h4>Example:</h4>
+                <pre>            
+                    <code>// GlobalVariables.cs
+                    public static class GlobalVariables
+                    {
+                        public static string ConnectionString = "your_connection_string";
+                    }
+
+                    // In another class
+                    class MyClass
+                    {
+                      public void DoSomething()
+                      {
+                        // Use the connection string
+                        using (SqlConnection connection = new SqlConnection(GlobalVariables.ConnectionString))
+                        {
+                            // ...
+                        }
+                      }
+                    }</code>
+                </pre>
+                <h4>Key Considerations</h4>
+                <ul>
+                    <li><strong>Use with caution:</strong> Global variables should be used sparingly and only when absolutely necessary.</li>
+                    <li><strong>Consider alternatives:</strong> Explore static class proprties, dependency injection, or configuration files before resorting to global variables.</li>
+                    <li><strong>Proper naming: </strong> Use clear and descriptive names for global variables to improve code readability.</li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="Constants">
+                <header><h3>Constants</h3></header>
+                <ul>
+                    <li><strong>Definition:</strong> Constants are variables whose values cannot be changed after they are initialized. They are declared using the <code>const</code> keyword.</li>
+                    <li><strong>Benefits:</strong></li>
+                    <ul>
+                        <li><strong>Readability:</strong> Improve code readability by making it clear that certain values should not be modified.</li>
+                        <li><strong>Maintainability:</strong> Easier to maintain code as you don't need to worry about accidental changes to important values.</li>
+                        <li><strong>Performance:</strong> In some cases, the compiler can optimize code that uses constants, potentially improving performance.</li>
+                        <li><strong>Security:</strong> Help prevent unintended modifications to sensitive values.</li>
+                    </ul>
+                    <li>Declaration:</li>
+                    <pre>
+                        <code>const int MaxValue = 100;
+                        const double Pi = 3.14159;
+                        const string CompanyName = "Acme Corp";</code>
+                    </pre>
+                    <li><strong>Data Types:</strong> Constants can be of any data type, including:</li>
+                    <ul>
+                        <li><code>int</code>, <code>long</code>, <code>short</code>, <code>byte</code>, <code>float</code>, <code>double</code>, <code>decimal</code> [numeric types]</li>
+                        <li><code>char</code>, <code>string</code> [character and string types] </li>
+                        <li><code>bool</code> [boolean type] </li>
+                        <li><code>enum</code> [enumeration types]</li>
+                        <p></p>
+                    </ul>
+                    <li><strong>Initialization:</strong> Constants must be initialized at the time of declaration</li>
+                    <li><strong>Usage:</strong></li>
+                    <pre>
+                        <code>int result = MaxValue * 2;
+                        double area = Pi * radius * radius;</code>
+                    </pre>
+                    <h4>Example</h4>
+
+                    <pre>
+                        <code>public class Circle
+                        {
+                          const double Pi = 3.14159;
+
+                          public double CalculateArea(double radius)
+                          {
+                            return Pi * radius * radius;
+                          }
+                        }</code>
+                    </pre>
+                    <h4>Key Points</h4>
+                    <ul>
+                        <li>Constants are declared using the <code>const</code> keyword.</li>
+                        <li>Their values cannot be changed after initialization</li>
+                        <li>They improve code readability, maintainability, and performance</li>
+                        <li>They can be used with any data type</li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section class="main-section" id="If...else_Statements">
+                <header><h3>If...Else Statements</h3></header>
+            
+                <li><strong>Purpose:</strong></li>
+                <ul>
+                    <li>Used to make decisions in your code based on whether a specific condition is true or false.</li>
+                    <li>Control the flow of execution by executing different blocks of code depending on the outcome of the condition</li>
+                </ul>
+                <li><strong>Syntax:</strong></li>
+                    <pre>
+                        <code>if (condition)
+                        {
+                          // Code to execute if the condition is true
+                        }
+                        else
+                        {
+                          // Code to execute if the condition is false
+                        }</code>
+                    </pre>
+                    <li><strong>Explanation</strong></li>
+                    <ul>
+                        <li><strong>Condition:</strong></li>
+                        <ul>
+                            <li>An expression that evaluates to a boolean value (<code>true</code> or <code>false</code>.)</li>
+                            <li>Can involve comparisons (e.g. <code>>, <, >=, <=, ==, !=</code>), logical operators (<code>&&, ||, !</code>), and other boolean expressions.</li>
+                        </ul>
+                        <li><strong>True Block:</strong></li>
+                        <ul>
+                            <li>The code within the first set of curly braces <code>{}</code> will execute if the <code>condition</code> is <code>true</code>.</li>
+                        </ul>
+                        <li><strong>False Block</strong>(optional):</li>
+                        <ul>
+                            <li>The code wihin the <code>else</code> block will execute if the condition is <code>false</code>.</li>
+                            <li>The <code>else</code> block is optional.</li>
+                        </ul>
+                    </ul>
+                    <h4>Example:</h4>
+                    <pre>
+                        <code>int testScore = 100;
+                        if (testScore >= 70)
+                        {
+                          Console.WriteLine("You have passed this test!");
+                        }
+                        else
+                        {
+                          Console.WriteLine("The test was failed.");
+                        }</code>
+                    </pre>
+                    <li><strong>Nested <code>if...else</code> Statements:</strong></li>
+                    <ul>
+                        <li>You can nest <code>if...else</code> statements within each other to create more complex decision-making logic.</li>
+                        <pre>
+                            <code>if (condition1)
+                            {
+                                // Code to execute if condition1 is true.
+                            }
+                            else if (condition2)
+                            {
+                                // Code to execute if condition1 is false and condition2 is true
+                            }
+                            else
+                            {
+                                // Code to execute if both condition1 and condition2 are false
+                            }</code>
+                        </pre>
+                    </ul>
+                    <h4>Key Points:</h4>
+                    <ul>
+                        <li><code>if...else</code>statements are essential for controlling the flow of your C# programs.</li>
+                        <li>Use them to make decisions and execute different code paths based on conditions.</li>
+                        <li>The <code>else</code> block is optional.</li>
+                        <li>You can nest <code>if...else</code> statements for more complex logic.</li>
+                    </ul>
+            </section>
+
+            <section class="main-section" id="While_Statements">
+                <header><h3>While Statements</h3></header>
+                <h4>Purpose:</h4>
+                <ul>
+                    <li>Used to repeatedly execute a block of code as long as a specific condition remains <code>true</code></li>
+                    <li>Create loops that continue to iterate until the condition becomes <code>false</code>.</li>
+                </ul>
+                <h4>Syntax:</h4>
+                <pre>
+                    <code>while (condition)
+                    {
+                        // Code to execute as long as the condition is true
+                    }</code>
+                </pre>
+                <h4>Explanation:</h4>
+                <ul>
+                    <li><strong>Condition:</strong></li>
+                    <ul>
+                        <li>An expression that evaluates to a boolean value (<code>true</code> or <code>false</code>).</li>
+                        <li>Determines whether the loop should continue to execute.</li>
+                    </ul>
+                    <li><strong>Loop Body:</strong></li>
+                    <ul>
+                        <li>The code within the curly braces <code>{}</code> is repeatedly executed as long as the <code>condition</code> remains <code>true</code>.
+                    </ul>
+                </ul>
+                <h4>Example:</h4>
+                <pre>
+                    <code>int count = 0;
+                    while (count < 5)
+                    {
+                      Console.WriteLine(Count);
+                      count++;
+                    }</code>
+                </pre>
+                <ul>
+                    <li>This code will print the numbers 0 through 4 to the console.</li>
+                    <li>The loop continues to execute as long as the value of <code>count</code> is less than 5.</li>
+                </ul>
+                <h4>Important Notes:</h4>
+                <ul>
+                    <li><strong>Infinite Loops:</strong> </li>
+                    <ul>
+                        <li>If the condition is within the <code>while</code>statement never becomes <code>false</code>, the loop will execute indefinitely. This can cause your programs to hang or crash.</li>
+                        <li>Ensure that there is a mechanism wihin the loop body to eventually make the condition <code>false</code>.</li>
+                    </ul>
+                    <li><code>do...while</code> <strong>Loop:</strong></li>
+                    <ul>
+                        <li>Similar to the <code>while</code> loop, but the condition is checked <em>after</em> the first iteration of the loop body.
+                        <li>Guarantees that the loop body will execute at least once</li>
+                        <pre>
+                            <code>do
+                            {
+                              //Code to execute
+                            } while (condition);</code>
+                        </pre>
+                    </ul>
+                </ul>
+                <h4>Key Points</h4>
+                <ul>
+                    <li><code>while</code> loops are essential for repetitive tasks in C#. </li>
+                    <li>Use them carefully to avoid infinite loops</li>
+                    <li>Consider using a <code>do...while</code> loop if you need to ensure that the loop body executes at least once. </li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="Function_Declarations">
+                <header><h3>Function Declarations</h3></header>
+                <ul>
+                    <li><strong>Purpose:</strong></li>
+                    <ul>
+                        <li>Define a reusable block of code that performs a specific task.</li>
+                        <li>Break down complex problems into smaller, more manageable units. </li>
+                        <li>Improve code organization, readability, and maintainability</li>
+                    </ul>
+                    <li><strong>Syntax:</strong></li>
+                    <pre>
+                        <code>return_type function_name(parameter_list)
+                        {
+                            /* Function body - code to be executed
+                            ... */
+                            return [value]; // If the function has a return type
+                        }</code>
+                    </pre>
+                    <li><strong>Explanation:</strong></li>
+                    <ul>
+                        <li><code>return_type</code>:</li>
+                        <ul>
+                            <li>Specifies the data type of the value that the function will return. </li>
+                            <li>If the function does not return any value, use <code>void</code>.</li>
+                        </ul>
+                        <li><code>function_name</code>:</li>
+                        <ul>
+                            <li>The name of the function</li>
+                            <li>Should be descriptive and meaningful</li>
+                        </ul>
+                        <li><code>parameter_list</code>:</li>
+                        <ul>
+                            <li>A comma-separated list of parameters that the function accepts.</li>
+                            <li>Each parameter consists of a data type and a parameter name</li>
+                            <li>If the function doesn't accept any parameters, the parameter list is empty <code>()</code>.
+                        </ul>
+                        <li><code>function_body</code>:</li>
+                        <ul>
+                            <li>The code that the function executes.</li>
+                            <li>Can include any valid C# statements</li>
+                        </ul>
+                        <li><code>return</code><strong> statement:</strong></li>
+                        <ul>
+                            <li>Used to return a value from the function.</li>
+                            <li>The returned value must match the <code>return_type</code> of the function.</li>
+                            <li>If the function is <code>void</code>, the <code>return</code> statement is optional.</li>
+                        </ul>
+                    </ul>
+                    <h4> Example:</h4>
+                    <pre>
+                        <code>int add(int a, int b)
+                        {
+                          int sum = a + b;
+                          return sum;
+                        }</code>
+                    </pre>
+                    <ul>
+                        <li>This function named <code>Add</code> takes two integer parameters (<code>a</code> and <code>b</code>) and returns their sum as an integer.
+                    </ul>
+                    <h4>Calling a Function:</h4>
+                    <li>To use a function, you call it by its name and provide the required arguments (if any).</li>
+                    <pre>
+                        <code>int result = Add(5, 3); /*Calls the Add function with arguments 5 and 3*/
+                        Console.WriteLine(result); /*Output: 8*/</code>
+                    </pre>
+
+                    <h3>Key Points:</h3>
+                    <ul>
+                        <li>Functions are fundamental building blocks of C# programs.</li>
+                        <li>They promote code reusability and improve code organization</li>
+                        <li>Use meaningful function names to enhance code readability</li>
+                        <li>Choose appropriate return types for your functions.</li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section class="main-section" id="Reference">
+                <header><h3>Reference</h3></header>
+                <li>For further information on this language, as well as additional courses and learning paths, please visit <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank">Microsoft Learn</a>.</li>
+            </section>
+        </main>
+
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>
