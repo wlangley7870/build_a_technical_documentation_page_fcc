@@ -1,0 +1,236 @@
+body {
+    background-color: #1E1F20;
+    color: white;
+    font-family: tahoma;
+    line-height: 1.6;
+    padding-top: 50px;
+    margin: 4px;
+}
+  
+code {
+    text-wrap: wrap;
+    font-size: 16px;
+    background-color: #3C3C3C;
+    border-radius: 6px;
+    padding: 2px 4px 2px 4px;
+    border: 1px solid rgba(255,255,255,0.75);
+}
+  
+pre {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0);
+    border-radius: 6px;
+    max-width: 75%;
+    white-space: pre-line;
+}
+  
+nav {
+    position: fixed;
+    top: 0;
+    width: 99%;
+    border: 1px solid rgba(255,255,255,.75);
+    border-radius: 8px;
+    background-color: rgba(15,15,15,0.75);
+}
+  
+#nav-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    height: 45px;
+}
+  
+#cs-logo {
+    width: 35px;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropbtn {
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    
+    font-size: 16px;
+    border:none;
+    border-radius: 8px;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,.80);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: rgba(255,255,255,.95);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: 1px solid white;
+    border-radius: 4px;
+    text-align: center;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content a:hover {
+    color: gray;
+    border: 2px solid gray;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color: rgba(255,255,255,0.35);
+}
+  
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+  
+@media only screen and (max-width: 319px) {
+#device-type {
+    content: url("https://img.icons8.com/?size=100&id=5BAIxFcuBYnQ&format=png&color=FFFFFF");
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+/* mobile devices */
+#device-type {
+    content: url("https://img.icons8.com/?size=100&id=5BAIxFcuBYnQ&format=png&color=FFFFFF");
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+/* iPads/Tablets */
+#device-type {
+    content: url("https://img.icons8.com/?size=100&id=xfFXzXF6lTBw&format=png&color=FFFFFF");
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+/* Small Screens, Laptops */
+    #device-type {
+    content: url(https://img.icons8.com/?size=100&id=10326&format=png&color=FFFFFF);
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+/* Desktops, Large Screens*/
+    #device-type {
+    content: url("https://img.icons8.com/?size=100&id=20389&format=png&color=FFFFFF")
+    }
+
+    .dropdown-content {
+    min-width: 300px;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+/* Extra Large Screens, TV */
+    #device-type {
+    content: url("https://img.icons8.com/?size=100&id=9989&format=png&color=FFFFFF")
+    }
+
+    .dropdown-content {
+    min-width: 400px;
+    }
+}
+
+
+#navbutton {
+width: 35px;
+}
+
+#device-type {
+width: 35px;
+}
+
+.main-section {
+padding: 25px 50px;
+}
+
+@media only print {
+
+body {
+    background-color: white;
+    color: black;
+}
+
+#navbar {
+    display: none;
+    }
+
+}
+
+/* The following css rules have been manually imported from a remote file as there was an issue with the testing algorithm when linking. These pertain to the code snippet styling and should be left. */
+
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 1em;
+}
+
+code.hljs {
+    padding: 3px 5px;
+}
+
+.hljs {
+    color:#abb2bf;
+    background:#282c34;
+}
+
+.hljs-comment,.hljs-quote { 
+    color:#5c6370;
+    font-style:italic;
+}
+
+.hljs-doctag,.hljs-formula,.hljs-keyword {
+    color:#c678dd;
+}
+
+.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst {
+    color:#e06c75;
+}
+
+.hljs-literal { 
+    color:#56b6c2; 
+}
+
+.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string { 
+    color:#98c379;
+}
+
+.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable {
+    color:#d19a66;
+}
+
+.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title {
+    color:#61aeee;
+} 
+
+.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_ {
+    color:#e6c07b;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+} 
+
+.hljs-strong { 
+    font-weight: 700; 
+}
+
+.hljs-link { 
+    text-decoration: underline;
+}
+  
